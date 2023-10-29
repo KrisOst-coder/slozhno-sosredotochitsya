@@ -1,4 +1,25 @@
+
+
 /*
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --accent-color: #FF0070;
+  --shadow-color: #FF0070;
+  --title-accent-color: #FF0070;
+  --light-accent-color: #353430;
+  --background-color-titles: #000028;
+  --dark-text-color: #000028;
+  --font-title-color: #DB00FF;
+  --font-main-color: #F1B2CE;
+  --theme-menu-color: #FF0070;
+  --font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --main-font-family: 'IBM Plex mono', sans-serif;
+  --margin-right-left: 20px;
+  --margin-block: 80px;
+  --margin-head-footer: 60px;
+  --shadow-link-color: #FF0070;
+
+
+}
