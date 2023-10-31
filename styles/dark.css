@@ -18,6 +18,8 @@
   --title-accent-color: #FF0070;
   --font-main-color: #F1B2CE;
   --shadow-link-color: #FF0070;
+  --border-transparent-color: rgba(255, 0, 112, 0.40);
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,6 +37,7 @@
     --title-accent-color: #FF0070;
     --font-main-color: #F1B2CE;
     --shadow-link-color: #FF0070;
+    --border-transparent-color: rgba(255, 0, 112, 0.40);
   }
 }
 

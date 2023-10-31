@@ -17,9 +17,9 @@
   --font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --main-font-family: 'IBM Plex mono', sans-serif;
   --margin-right-left: 20px;
-  --margin-block: 80px;
+  --margin-block: 73px;
   --margin-head-footer: 60px;
   --shadow-link-color: #FF0070;
-
+  --border-transparent-color: rgba(50, 49, 45, 0.40);
 
 }
