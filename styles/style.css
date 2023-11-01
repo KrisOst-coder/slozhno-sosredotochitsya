@@ -112,7 +112,7 @@
 }
 
 .empty-element::before  {
-  content: "REC";
+  content: "rec";
   text-transform: uppercase;
   color: var(--accent-color);
   font-family: var(--main-font-family);
@@ -132,7 +132,7 @@
   box-shadow: 0 0 5px 3px var(--accent-color);
   /* right: 0px; */
   top: 0px;
-  margin-left: 10px;
+  right: -18px;
   margin-top: 8px;
 }
 
@@ -302,47 +302,63 @@
   pointer-events: none;
 }
 
-.picture-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-areas: 
-    "sunset sunset icecream"
-    "tape books icecream"
-    "tape street street";
-  margin-bottom: var(--margin-head-footer);
-  margin-top: var(--margin-right-left);
-}
-
 .block-picture {
   margin-left: var(--margin-right-left);
   margin-right: var(--margin-right-left);
   padding-top: 10px;
 }
 
+.picture-grid {
+  display: grid;
+  gap: 20px;
+  margin-bottom: var(--margin-head-footer);
+  margin-top: var(--margin-right-left);
+}
+
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  margin-block-start: 0;
 }
 
-.sunset {
-  grid-area: sunset;
+.list-item:nth-child(1) {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
-.icecream {
-  grid-area: icecream;
+.list-item:nth-child(2) {
+  display: grid;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
-.tape {
-  grid-area: tape;
+.list-item:nth-child(3) {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
 
-.books {
-  grid-area: books;
+.list-item:nth-child(4) {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
-.street {
-  grid-area: street;
+.list-item:nth-child(5) {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 .footer {
@@ -434,16 +450,6 @@
     --margin-right-left: 10px;
   }
 
-  .square-top {
-    /* position: absolute; */
-    --margin-right-left: 10px;
-  }
-  
-  .square-bottom {
-    /* position: absolute; */
-    --margin-right-left: 10px;
-  }
-
   .header__theme-menu-list {
     --margin-right-left: 10px;
     gap: 10px
@@ -515,15 +521,11 @@
   }
 
   .picture-grid {
-    --margin-right-left: 10px;
-    --margin-head-footer: 40px;
-    gap: 10px;
-    grid-template-areas:
-    "sunset"
-    "icecream"
-    "tape"
-    "books"
-    "street";
+    display: block;
+  }
+
+  .list-item {
+    margin-bottom: 10px;
   }
 
   .image {
