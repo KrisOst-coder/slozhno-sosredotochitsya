@@ -3,6 +3,9 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .header {
@@ -94,6 +97,10 @@
   outline: 1px solid var(--theme-menu-color);
   pointer-events: none;
   cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -268,6 +275,7 @@
   font-weight: 400;
   line-height: 23.4px;
   margin-bottom: 10px;
+  word-wrap: break-word;
 }
 
 .block-main-text {
@@ -278,6 +286,7 @@
   font-weight: 400;
   line-height: 23.4px;
   margin-bottom: 10px;
+  word-wrap: break-word;
 }
 
 .linked-world {
@@ -295,12 +304,18 @@
   outline: none;
   border-bottom: 1.8px solid var(--font-main-color);
   cursor: pointer;
+  /* text-decoration-line: underline; */
+}
+
+.linked-world:focus {
+  outline: none;
 }
 
 .linked-world:focus-visible {
   outline: 1.8px solid var(--font-main-color);
   pointer-events: none;
 }
+
 
 .block-picture {
   margin-left: var(--margin-right-left);
@@ -362,10 +377,10 @@
 }
 
 .footer {
-  position: relative;
   display: grid;
+  position: relative;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   align-items: center;
   justify-content: center;
 }
@@ -380,7 +395,6 @@
   font-weight: 700;
   line-height: 82.5%;
   text-align: center;
-  margin-top: 75px;
 }
  
 @media (768px <  width) {
@@ -410,8 +424,12 @@
     display: block;
   }
 
-  .main-content-block.main-text {
+  .main-text {
     margin-bottom: 20px;
+  }
+
+  .main-content-block.main-text {
+    /* margin-bottom: 20px; */
     margin-top: 10px;
   }
 
@@ -424,11 +442,7 @@
   }
 
   .inline-text {
-    --margin-block: 68px;
-  }
-
-  .footer-title {
-    margin-top: 110px;
+    margin-bottom: 80px;
   }
 }
 
@@ -464,7 +478,7 @@
     --margin-right-left: 10px;
     --margin-block: 45px;
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 55px;
   }
 
   .title-text.title-text-inline {
@@ -481,7 +495,7 @@
     --margin-block: 30px;
     --margin-right-left: 10px;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 55px;
   }
 
   .block-main-text {
@@ -522,6 +536,11 @@
 
   .picture-grid {
     display: block;
+    margin-bottom: 40px;
+  }
+
+  .block-picture {
+    padding-top: 0px;
   }
 
   .list-item {
@@ -537,7 +556,6 @@
   }
 
   .footer-title {
-    margin-top: 100px;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
