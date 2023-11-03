@@ -312,7 +312,7 @@
 }
 
 .linked-world:focus-visible {
-  outline: 1.8px solid var(--font-main-color);
+  outline: 1px solid var(--font-main-color);
   padding-left: 2px;
   padding-right: 2px;
   padding-bottom: 5px;
